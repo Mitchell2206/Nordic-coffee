@@ -155,7 +155,7 @@ export default function Home() {
 
       <section className="tastings section" id="catas">
         <div className="tastings-copy">
-          <p className="eyebrow light">05 · Encuentros Nordic</p>
+          <p className="eyebrow light">05 · Nordic Noir</p>
           <h2>Cata de vinos.<br /><em>Una noche para descubrir.</em></h2>
           <p className="tastings-intro">Una experiencia sensorial alrededor del vino: nuevos sabores, conversación y una mesa compartida en Nordic.</p>
           <div className="tasting-date" aria-label="Próxima cata de vinos: 14 de agosto de 2026">
