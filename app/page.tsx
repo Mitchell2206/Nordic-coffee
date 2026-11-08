@@ -7,9 +7,8 @@ const mapsUrl =
 const whatsappUrl =
   "https://wa.me/5491167937463?text=Hola%20Nordic%2C%20quiero%20hacer%20una%20reserva%20%E2%9C%A8";
 const tastingWhatsappUrl =
-  "https://wa.me/5491167937463?text=Hola%20Nordic%2C%20quisiera%20recibir%20informaci%C3%B3n%20sobre%20la%20cata%20de%20vinos%20del%2014%20de%20agosto%20%E2%9C%A8";
-const runeUrl =
-  "https://aistudio.instagram.com/ai/581787608285357/?utm_source=mshare";
+  "https://wa.me/5491167937463?text=Hola%20Nordic%2C%20quiero%20sumarme%20a%20la%20lista%20para%20la%20pr%C3%B3xima%20experiencia%20Nordic%20%E2%9C%A8";
+const runeUrl = "/runas";
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
@@ -31,7 +30,7 @@ export default function Home() {
 
         <div className="header-actions">
           <LoyboxHeaderButton />
-          <a className="header-rune-primary" href={runeUrl} target="_blank" rel="noreferrer">
+          <a className="header-rune-primary" href={runeUrl}>
             <b aria-hidden="true">ᛉ</b><span>Descubrí tu significado</span>
           </a>
         </div>
@@ -49,11 +48,11 @@ export default function Home() {
             mensaje que acompaña tu experiencia.
           </p>
           <div className="hero-actions">
-            <a className="button button-rune" href={runeUrl} target="_blank" rel="noreferrer">
+            <a className="button button-rune" href={runeUrl}>
               <span aria-hidden="true">ᛉ</span> Descubrí tu significado <Arrow />
             </a>
-            <a className="text-link" href="#significado">
-              Cómo funciona <span aria-hidden="true">↓</span>
+            <a className="text-link" href={whatsappUrl} target="_blank" rel="noreferrer">
+              Reservar por WhatsApp <Arrow />
             </a>
           </div>
           <p className="hero-caption">Café · Runas · Experiencia sensorial</p>
@@ -78,7 +77,7 @@ export default function Home() {
       <section className="quick-actions" aria-label="Accesos rápidos">
         <p>¿Qué querés descubrir hoy?</p>
         <div>
-          <a href={runeUrl} target="_blank" rel="noreferrer"><b>ᛉ</b><span>Leer mi runa</span><Arrow /></a>
+          <a href={runeUrl}><b>ᛉ</b><span>Leer mi runa</span><Arrow /></a>
           <a href={menuUrl} target="_blank" rel="noreferrer"><b>01</b><span>Ver el menú</span><Arrow /></a>
           <a href="#loybox"><b>02</b><span>Conocer Loybox</span><span aria-hidden="true">↓</span></a>
           <a href={mapsUrl} target="_blank" rel="noreferrer"><b>03</b><span>Cómo llegar</span><Arrow /></a>
@@ -101,10 +100,10 @@ export default function Home() {
             <article><span>02</span><div><h3>Entrá a la lectura</h3><p>Abrí la experiencia desde el QR o desde esta página.</p></div></article>
             <article><span>03</span><div><h3>Descubrí su mensaje</h3><p>Conocé qué significa y cómo conecta con tu momento.</p></div></article>
           </div>
-          <a className="rune-cta" href={runeUrl} target="_blank" rel="noreferrer">
+          <a className="rune-cta" href={runeUrl}>
             <span><b aria-hidden="true">ᛉ</b> Descubrí tu significado</span><Arrow />
           </a>
-          <p className="rune-note">La lectura se abre en Instagram.</p>
+          <p className="rune-note">La lectura se abre acá, sin salir del sitio.</p>
         </div>
 
         <div className="ritual-quote">
@@ -139,29 +138,15 @@ export default function Home() {
 
       <LoyboxSection />
 
-      <section className="team section" id="equipo">
-        <div className="team-photo">
-          <img src="/images/nordic-team-clean.png" alt="John, integrante del equipo Nordic Coffee, detrás de la barra" loading="lazy" decoding="async" />
-          <span>JOHN · EQUIPO NORDIC</span>
-        </div>
-        <div className="team-copy">
-          <p className="eyebrow">04 · El equipo</p>
-          <h2>Personas que convierten cada visita en <em>una experiencia.</em></h2>
-          <p className="team-intro">John y el equipo Nordic trabajan cada detalle detrás de la barra: café bien preparado, curiosidad y una atención cercana.</p>
-          <blockquote>“El ritual empieza mucho antes de servir la taza.”</blockquote>
-          <a className="text-link" href={instagramUrl} target="_blank" rel="noreferrer">Conocé más en Instagram <Arrow /></a>
-        </div>
-      </section>
-
       <section className="tastings section" id="catas">
         <div className="tastings-copy">
-          <p className="eyebrow light">05 · Nordic Noir</p>
-          <h2>Cata de vinos.<br /><em>Una noche para descubrir.</em></h2>
-          <p className="tastings-intro">Una experiencia sensorial alrededor del vino: nuevos sabores, conversación y una mesa compartida en Nordic.</p>
-          <div className="tasting-date" aria-label="Próxima cata de vinos: 14 de agosto de 2026">
-            <span>PRÓXIMA CATA DE VINOS</span><strong>14 · AGO</strong><small>2026 · Consultanos por disponibilidad</small>
+          <p className="eyebrow light">04 · Encuentros Nordic</p>
+          <h2>Próxima experiencia.<br /><em>Una noche para descubrir.</em></h2>
+          <p className="tastings-intro">Catas, sabores y encuentros pensados para compartir Nordic de una manera diferente.</p>
+          <div className="tasting-date" aria-label="Próxima experiencia Nordic: fecha a anunciar">
+            <span>PRÓXIMA EXPERIENCIA NORDIC</span><strong>MUY PRONTO</strong><small>Sumate a la lista y enterate antes que nadie</small>
           </div>
-          <a className="button button-gold" href={tastingWhatsappUrl} target="_blank" rel="noreferrer">Consultar por WhatsApp <Arrow /></a>
+          <a className="button button-gold" href={tastingWhatsappUrl} target="_blank" rel="noreferrer">Sumarme a la lista <Arrow /></a>
         </div>
         <figure className="tasting-main">
           <img src="/images/nordic-wine-tasting-clean.png" alt="Personas brindando con vino durante una cata en Nordic Coffee" loading="lazy" decoding="async" />
@@ -172,16 +157,16 @@ export default function Home() {
       <section className="reviews section">
         <div className="reviews-mark">“</div>
         <div className="review-copy">
-          <p className="eyebrow">06 · Lo que se siente</p>
-          <blockquote>“La atención es súper cálida, el café riquísimo y las tazas con runas hacen que la experiencia sea única.”</blockquote>
-          <p className="review-source">— Inspirado en reseñas de quienes ya vivieron Nordic</p>
+          <p className="eyebrow">05 · Lo que se siente</p>
+          <blockquote>“Café pequeño pero muy agradable. El ambiente es tranquilo, la atención muy amable y el café, riquísimo.”</blockquote>
+          <p className="review-source">— Candelaria Cavagna · Reseña en Google</p>
         </div>
         <a className="reviews-link" href={mapsUrl} target="_blank" rel="noreferrer" aria-label="Ver Nordic Coffee en Google Maps"><span className="rating">4.9</span><span className="stars">★★★★★</span><small>VER RESEÑAS EN GOOGLE <Arrow /></small></a>
       </section>
 
       <section className="visit section" id="visitanos">
         <div className="visit-panel">
-          <p className="eyebrow light">07 · Vení a vivirlo</p>
+          <p className="eyebrow light">06 · Vení a vivirlo</p>
           <h2>Tu próxima experiencia<br />está en <em>Villa Urquiza.</em></h2>
           <div className="visit-details">
             <div><span>DIRECCIÓN</span><p>Juramento 4979<br />Villa Urquiza, CABA</p></div>
@@ -195,14 +180,28 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="team section" id="equipo">
+        <div className="team-photo">
+          <img src="/images/nordic-team-clean.png" alt="Jhon, integrante del equipo Nordic Coffee, detrás de la barra" loading="lazy" decoding="async" />
+          <span>JHON · EQUIPO NORDIC</span>
+        </div>
+        <div className="team-copy">
+          <p className="eyebrow">07 · El equipo</p>
+          <h2>Personas que convierten cada visita en <em>una experiencia.</em></h2>
+          <p className="team-intro">Jhon y el equipo Nordic trabajan cada detalle detrás de la barra: café bien preparado, curiosidad y una atención cercana.</p>
+          <blockquote>“El ritual empieza mucho antes de servir la taza.”</blockquote>
+          <a className="text-link" href={instagramUrl} target="_blank" rel="noreferrer">Conocé más en Instagram <Arrow /></a>
+        </div>
+      </section>
+
       <footer>
         <a className="footer-brand" href="#inicio"><img src="/images/nordic-isologo-gold.png" alt="" /><span>NORDIC<small>COFFEE</small></span></a>
         <p>Café de especialidad. Experiencia sensorial.</p>
-        <div className="social-links"><a href={runeUrl} target="_blank" rel="noreferrer">Tu runa <Arrow /></a><a href={instagramUrl} target="_blank" rel="noreferrer">Instagram <Arrow /></a><a href={menuUrl} target="_blank" rel="noreferrer">Menú <Arrow /></a><a href={whatsappUrl} target="_blank" rel="noreferrer">WhatsApp <Arrow /></a></div>
+        <div className="social-links"><a href={runeUrl}>Tu runa <Arrow /></a><a href={instagramUrl} target="_blank" rel="noreferrer">Instagram <Arrow /></a><a href={menuUrl} target="_blank" rel="noreferrer">Menú <Arrow /></a><a href={whatsappUrl} target="_blank" rel="noreferrer">WhatsApp <Arrow /></a></div>
         <small className="copyright">Juramento 4979 · Villa Urquiza · Buenos Aires</small>
       </footer>
 
-      <a className="mobile-rune-cta" href={runeUrl} target="_blank" rel="noreferrer"><span aria-hidden="true">ᛉ</span> Descubrí tu significado <Arrow /></a>
+      <a className="mobile-rune-cta" href={runeUrl}><span aria-hidden="true">ᛉ</span> Descubrí tu significado <Arrow /></a>
     </main>
   );
 }
