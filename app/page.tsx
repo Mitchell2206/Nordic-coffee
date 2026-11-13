@@ -10,6 +10,8 @@ const tastingWhatsappUrl =
   "https://wa.me/5491167937463?text=Hola%20Nordic%2C%20quiero%20sumarme%20a%20la%20lista%20para%20la%20pr%C3%B3xima%20experiencia%20Nordic%20%E2%9C%A8";
 const runeUrl = "/runas";
 
+const productSizes = "(max-width: 820px) 100vw, 31vw";
+
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
 export default function Home() {
@@ -17,7 +19,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="wordmark" href="#inicio" aria-label="Nordic Coffee, inicio">
-          <img className="brand-emblem" src="/images/nordic-isologo-gold.png" alt="" />
+          <img className="brand-emblem" src="/images/nordic-isologo-gold.webp" alt="" width={100} height={110} />
           <span className="brand-name">NORDIC<small>COFFEE</small></span>
         </a>
 
@@ -61,10 +63,13 @@ export default function Home() {
         <div className="hero-visual">
           <img
             className="hero-photo"
-            src="/images/nordic-cup-latte.jpeg"
+            src="/images/nordic-cup-latte-1123.webp"
+            srcSet="/images/nordic-cup-latte-640.webp 640w, /images/nordic-cup-latte-1123.webp 1123w"
+            sizes="(max-width: 820px) 100vw, 53vw"
+            width={1123}
+            height={1400}
             alt="Barista preparando latte art en una taza artesanal Nordic con runa"
             fetchPriority="high"
-            decoding="async"
           />
           <div className="hero-shade" />
           <div className="hero-story">
@@ -121,15 +126,15 @@ export default function Home() {
 
         <div className="products-grid">
           <article className="product-card">
-            <div className="product-image coffee-card"><img src="/images/nordic-cup-latte.jpeg" alt="Café con latte art servido en una taza Nordic con runa" loading="lazy" decoding="async" /><span className="product-number">01</span></div>
+            <div className="product-image coffee-card"><img src="/images/nordic-cup-latte-640.webp" srcSet="/images/nordic-cup-latte-640.webp 640w, /images/nordic-cup-latte-1123.webp 1123w" sizes={productSizes} width={640} height={798} alt="Café con latte art servido en una taza Nordic con runa" loading="lazy" decoding="async" /><span className="product-number">01</span></div>
             <div className="product-copy"><div><p>EL RITUAL EN TAZA</p><h3>Café Nordic</h3></div><span>Café de especialidad preparado y servido en nuestras tazas artesanales.</span></div>
           </article>
           <article className="product-card">
-            <div className="product-image carrot-card"><img src="/images/carrot-cake-favorita.jpeg" alt="Carrot Cake de Nordic Coffee" loading="lazy" decoding="async" /><span className="product-number">02</span></div>
+            <div className="product-image carrot-card"><img src="/images/carrot-cake-favorita-480.webp" srcSet="/images/carrot-cake-favorita-480.webp 480w, /images/carrot-cake-favorita-864.webp 864w" sizes={productSizes} width={480} height={853} alt="Carrot Cake de Nordic Coffee" loading="lazy" decoding="async" /><span className="product-number">02</span></div>
             <div className="product-copy"><div><p>LA MÁS PEDIDA</p><h3>Carrot Cake</h3></div><span>Húmeda, liviana y con ese frosting que ya es parte de la experiencia.</span></div>
           </article>
           <article className="product-card">
-            <div className="product-image avo-card"><img src="/images/avo-jord.png" alt="Avo Jord de Nordic Coffee servido sobre masa madre" loading="lazy" decoding="async" /><span className="product-number">03</span></div>
+            <div className="product-image avo-card"><img src="/images/avo-jord-480.webp" srcSet="/images/avo-jord-480.webp 480w, /images/avo-jord-960.webp 960w" sizes={productSizes} width={480} height={451} alt="Avo Jord de Nordic Coffee servido sobre masa madre" loading="lazy" decoding="async" /><span className="product-number">03</span></div>
             <div className="product-copy"><div><p>FAVORITO NÓRDICO</p><h3>Avo Jord</h3></div><span>Hummus de morrón, palta y hongos escabechados sobre masa madre.</span></div>
           </article>
         </div>
@@ -149,7 +154,7 @@ export default function Home() {
           <a className="button button-gold" href={tastingWhatsappUrl} target="_blank" rel="noreferrer">Sumarme a la lista <Arrow /></a>
         </div>
         <figure className="tasting-main">
-          <img src="/images/nordic-wine-tasting-clean.png" alt="Personas brindando con vino durante una cata en Nordic Coffee" loading="lazy" decoding="async" />
+          <img src="/images/nordic-wine-tasting-clean-940.webp" srcSet="/images/nordic-wine-tasting-clean-600.webp 600w, /images/nordic-wine-tasting-clean-940.webp 940w" sizes="(max-width: 820px) 100vw, 55vw" width={940} height={1672} alt="Personas brindando con vino durante una cata en Nordic Coffee" loading="lazy" decoding="async" />
           <figcaption>Una experiencia sensorial, cercana y sin apuro.</figcaption>
         </figure>
       </section>
@@ -174,15 +179,15 @@ export default function Home() {
           </div>
           <div className="visit-actions"><a className="button button-cream" href={mapsUrl} target="_blank" rel="noreferrer">Abrir en Maps <Arrow /></a><a className="text-link light-link" href={whatsappUrl} target="_blank" rel="noreferrer">Reservar por WhatsApp <Arrow /></a></div>
         </div>
-        <div className="map-art" aria-label="Ubicación de Nordic Coffee en Villa Urquiza">
-          <span className="map-neighborhood">VILLA<br />URQUIZA</span>
+        <div className="map-art">
+          <span className="map-neighborhood" aria-hidden="true">VILLA<br />URQUIZA</span>
           <a href={mapsUrl} target="_blank" rel="noreferrer" className="map-pin" aria-label="Abrir ubicación en Google Maps"><i>ᛉ</i><span>NORDIC<br /><small>JURAMENTO 4979</small></span></a>
         </div>
       </section>
 
       <section className="team section" id="equipo">
         <div className="team-photo">
-          <img src="/images/nordic-team-clean.png" alt="Jhon, integrante del equipo Nordic Coffee, detrás de la barra" loading="lazy" decoding="async" />
+          <img src="/images/nordic-team-clean-941.webp" srcSet="/images/nordic-team-clean-600.webp 600w, /images/nordic-team-clean-941.webp 941w" sizes="(max-width: 820px) 100vw, 50vw" width={941} height={1672} alt="Jhon, integrante del equipo Nordic Coffee, detrás de la barra" loading="lazy" decoding="async" />
           <span>JHON · EQUIPO NORDIC</span>
         </div>
         <div className="team-copy">
@@ -195,7 +200,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <a className="footer-brand" href="#inicio"><img src="/images/nordic-isologo-gold.png" alt="" /><span>NORDIC<small>COFFEE</small></span></a>
+        <a className="footer-brand" href="#inicio"><img src="/images/nordic-isologo-gold.webp" alt="" width={100} height={110} loading="lazy" /><span>NORDIC<small>COFFEE</small></span></a>
         <p>Café de especialidad. Experiencia sensorial.</p>
         <div className="social-links"><a href={runeUrl}>Tu runa <Arrow /></a><a href={instagramUrl} target="_blank" rel="noreferrer">Instagram <Arrow /></a><a href={menuUrl} target="_blank" rel="noreferrer">Menú <Arrow /></a><a href={whatsappUrl} target="_blank" rel="noreferrer">WhatsApp <Arrow /></a></div>
         <small className="copyright">Juramento 4979 · Villa Urquiza · Buenos Aires</small>

@@ -1,5 +1,5 @@
-"use client";
-
+// Server component: the campaign date is evaluated per request on the server,
+// so no client JS is shipped and there is no hydration mismatch at the cutoff.
 const loyboxUrl = "https://app.loybox.com.ar/inicio?callbackUrl=%2Fdashboard";
 const campaignEnd = Date.UTC(2026, 8, 1, 2, 59, 59);
 

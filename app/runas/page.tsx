@@ -26,8 +26,10 @@ export default async function RunesPage({
         <Link className="wordmark" href="/" aria-label="Volver a Nordic Coffee">
           <img
             className="brand-emblem"
-            src="/images/nordic-isologo-gold.png"
+            src="/images/nordic-isologo-gold.webp"
             alt=""
+            width={100}
+            height={110}
           />
           <span className="brand-name">
             NORDIC<small>COFFEE</small>
