@@ -23,15 +23,8 @@ export default async function RunesPage({
   return (
     <main className="runes-page">
       <header className="runes-header">
-        <Link className="wordmark" href="/" aria-label="Volver a Nordic Coffee">
-          <img
-            className="brand-emblem"
-            src="/images/nordic-isologo-gold.png"
-            alt=""
-          />
-          <span className="brand-name">
-            NORDIC<small>COFFEE</small>
-          </span>
+        <Link className="logo" href="/" aria-label="Volver a Nordic Coffee">
+          <span className="logo-mark" />
         </Link>
         <Link className="runes-home-link" href="/">
           Volver a Nordic <span aria-hidden="true">↖</span>
