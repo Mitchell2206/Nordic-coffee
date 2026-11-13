@@ -21,7 +21,7 @@ export function LoyboxSection() {
   return (
     <section className="loybox section" id="loybox">
       <div className="loybox-heading">
-        <p className="eyebrow">04 · Beneficios Nordic</p>
+        <p className="eyebrow">03 · Beneficios Nordic</p>
         <span className="loybox-badge" aria-hidden="true">
           {active ? "x2" : <i className="glyph glyph-bean" />}
         </span>

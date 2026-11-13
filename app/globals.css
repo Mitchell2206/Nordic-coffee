@@ -37,8 +37,8 @@ img { display: block; max-width: 100%; height: auto; }
 figure { margin: 0; }
 ::selection { background: var(--gold); color: var(--night); }
 :focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 3px; }
-.site-header :focus-visible, .quick-actions :focus-visible, .tastings :focus-visible, .favorites :focus-visible, .visit-panel :focus-visible, .site-footer :focus-visible, .runes-header :focus-visible, .rune-reading-head :focus-visible, .rune-feedback :focus-visible { outline-color: var(--gold); }
-#significado, #temporada, #favoritos, #loybox, #equipo, #catas, #visitanos { scroll-margin-top: 84px; }
+.site-header :focus-visible, .quick-actions :focus-visible, .tastings :focus-visible, .visit-panel :focus-visible, .site-footer :focus-visible, .runes-header :focus-visible, .rune-reading-head :focus-visible, .rune-feedback :focus-visible { outline-color: var(--gold); }
+#significado, #temporada, #loybox, #equipo, #catas, #visitanos { scroll-margin-top: 84px; }
 
 /* ---------- Brand line-art (recolorable via currentColor) ---------- */
 .glyph { display: inline-block; flex: 0 0 auto; background-color: currentColor; -webkit-mask: var(--glyph) center / contain no-repeat; mask: var(--glyph) center / contain no-repeat; }
@@ -152,27 +152,6 @@ a:hover .arrow { transform: translate(2px, -2px); }
 .ritual-steps p { margin: 0; color: rgba(19,43,32,.72); font-size: 14px; line-height: 1.6; }
 .ritual-cta { grid-column: 1; display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
 .rune-note { margin: 0; font-size: 13px; color: rgba(19,43,32,.62); }
-
-/* ---------- Favorites ---------- */
-.favorites { background: var(--brown); color: var(--cream); }
-.favorites .eyebrow { color: var(--gold); }
-.favorites h2 { color: var(--cream); }
-.favorites h2 em { color: var(--gold); }
-.favorites-head { display: grid; grid-template-columns: 1.1fr .9fr; gap: 60px; align-items: end; }
-.favorites-head > p { max-width: 460px; margin: 0 0 6px; color: rgba(244,238,223,.8); font-size: 16px; line-height: 1.7; }
-.products-grid { margin: 62px 0 46px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-.product-card { display: flex; flex-direction: column; padding: 12px 12px 0; border-radius: 999px 999px var(--radius) var(--radius); background: var(--cream-soft); color: var(--brown); transition: transform .35s var(--ease); }
-.product-card:hover { transform: translateY(-6px); }
-.product-card:hover .arch img { transform: scale(1.04); }
-.product-image { aspect-ratio: 4 / 4.6; }
-.coffee-card img { object-position: center 58%; }
-.carrot-card img { object-position: 58% center; }
-.avo-card img { object-position: center 63%; }
-.product-copy { position: relative; padding: 24px 14px 28px; }
-.product-copy .product-number { position: absolute; top: -22px; right: 14px; width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; background: var(--night); color: var(--gold); font-size: 11px; font-weight: 700; box-shadow: 0 0 0 5px var(--cream-soft); }
-.product-copy p { margin: 0 0 8px; color: var(--gold-ink); font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
-.product-copy h3 { margin: 0 0 12px; color: var(--night); font-size: clamp(21px, 1.6vw, 26px); font-weight: 400; line-height: 1.2; letter-spacing: -.03em; }
-.product-copy > span:last-child { display: block; color: rgba(19,43,32,.74); font-size: 14px; line-height: 1.6; }
 
 /* ---------- Loybox ---------- */
 .loybox { position: relative; display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(50px, 8vw, 130px); align-items: center; overflow: hidden; background: var(--gold); color: var(--night); }
@@ -355,9 +334,7 @@ a:hover .arrow { transform: translate(2px, -2px); }
   .ritual-steps li { display: grid; grid-template-columns: 44px 1fr; column-gap: 18px; align-items: start; }
   .ritual-steps .glyph { grid-row: span 2; justify-self: center; }
   .ritual-steps h3 { margin-top: 2px; }
-  .favorites-head, .loybox, .tastings, .visit, .team { grid-template-columns: 1fr; }
-  .favorites-head { gap: 24px; }
-  .products-grid { grid-template-columns: 1fr; max-width: 460px; margin-inline: auto; }
+  .loybox, .tastings, .visit, .team { grid-template-columns: 1fr; }
   .loybox-content { max-width: none; }
   .tasting-main { order: -1; }
   .map-art { min-height: 420px; }
@@ -391,7 +368,6 @@ a:hover .arrow { transform: translate(2px, -2px); }
   .section { padding: 76px 20px; }
   h2 { font-size: clamp(30px, 8.6vw, 36px); }
   .ritual-quote { min-height: 320px; padding: 28px 24px; }
-  .products-grid { margin: 44px auto 36px; }
   .fika-dates { grid-template-columns: 1fr; gap: 4px; }
   .loybox-badge { width: 72px; height: 86px; }
   .loybox-content { padding: 24px 20px; }

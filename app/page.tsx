@@ -16,8 +16,6 @@ const runeUrl = "/runas";
 // when the page is statically generated.
 export const revalidate = 3600;
 
-const productSizes = "(max-width: 820px) 100vw, 31vw";
-
 const Arrow = () => <span className="arrow" aria-hidden="true">↗</span>;
 
 /** Brand line-art (mountains, cup, rune, bean) drawn from the Nordic illustrations. */
@@ -59,7 +57,6 @@ export default function Home() {
         <nav className="site-nav" aria-label="Navegación principal">
           <a href="#significado">La experiencia</a>
           <a href="#temporada">Temporada</a>
-          <a href="#favoritos">Favoritos</a>
           <a href="#catas">Catas</a>
           <a href="#visitanos">Visitanos</a>
         </nav>
@@ -304,68 +301,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Favoritos */}
-      <section className="favorites section" id="favoritos">
-        <div className="favorites-head">
-          <div>
-            <p className="eyebrow">03 · Favoritos de la casa</p>
-            <h2>
-              Tres formas de
-              <em>vivir Nordic.</em>
-            </h2>
-          </div>
-          <p>
-            Café bien preparado, pastelería artesanal y platos con identidad.
-            Una selección breve, cuidada y muy nuestra.
-          </p>
-        </div>
-
-        <div className="products-grid">
-          <article className="product-card">
-            <div className="arch product-image coffee-card">
-              <img src="/images/taza-verde-560.webp" srcSet="/images/taza-verde-560.webp 560w, /images/taza-verde-1000.webp 1000w" sizes={productSizes} width={560} height={560} alt="Latte con latte art en una taza artesanal verde de Nordic Coffee con runa" loading="lazy" decoding="async" />
-            </div>
-            <div className="product-copy">
-              <span className="product-number">01</span>
-              <p>El ritual en taza</p>
-              <h3>Café Nordic</h3>
-              <span>Café de especialidad preparado y servido en nuestras tazas artesanales.</span>
-            </div>
-          </article>
-          <article className="product-card">
-            <div className="arch product-image carrot-card">
-              <img src="/images/carrot-cake-520.webp" srcSet="/images/carrot-cake-520.webp 520w, /images/carrot-cake-1000.webp 1000w" sizes={productSizes} width={520} height={354} alt="Carrot Cake de Nordic Coffee" loading="lazy" decoding="async" />
-            </div>
-            <div className="product-copy">
-              <span className="product-number">02</span>
-              <p>La más pedida</p>
-              <h3>Carrot Cake</h3>
-              <span>Húmeda, liviana y con ese frosting que ya es parte de la experiencia.</span>
-            </div>
-          </article>
-          <article className="product-card">
-            <div className="arch product-image avo-card">
-              <img src="/images/avo-jord-480.webp" srcSet="/images/avo-jord-480.webp 480w, /images/avo-jord-960.webp 960w" sizes={productSizes} width={480} height={451} alt="Avo Jord de Nordic Coffee servido sobre masa madre" loading="lazy" decoding="async" />
-            </div>
-            <div className="product-copy">
-              <span className="product-number">03</span>
-              <p>Favorito nórdico</p>
-              <h3>Avo Jord</h3>
-              <span>Hummus de morrón, palta y hongos escabechados sobre masa madre.</span>
-            </div>
-          </article>
-        </div>
-        <a className="button button-outline-light" href={menuUrl} target="_blank" rel="noreferrer">
-          Explorar el menú completo <Arrow />
-        </a>
-      </section>
-
       <LoyboxSection />
 
       {/* Catas */}
       <section className="tastings section" id="catas">
         <div className="tastings-copy">
-          <p className="eyebrow">05 · Encuentros Nordic</p>
+          <p className="eyebrow">04 · Encuentros Nordic</p>
           <h2>
             Próxima experiencia.
             <em>Una noche para descubrir.</em>
@@ -401,7 +342,7 @@ export default function Home() {
             <figcaption><span>Desayuno</span><span>Brunch</span><span>Algo dulce</span><span className="dog">ᛉ Dog friendly</span></figcaption>
           </figure>
           <div>
-        <p className="eyebrow">06 · Lo que se siente</p>
+        <p className="eyebrow">05 · Lo que se siente</p>
         <blockquote>
           “Café pequeño pero muy agradable. El ambiente es tranquilo, la
           atención muy amable y el café, riquísimo.”
@@ -419,7 +360,7 @@ export default function Home() {
       {/* Visitanos */}
       <section className="visit" id="visitanos">
         <div className="visit-panel">
-          <p className="eyebrow">07 · Vení a vivirlo</p>
+          <p className="eyebrow">06 · Vení a vivirlo</p>
           <h2>
             Tu próxima experiencia está en
             <em>Villa Urquiza.</em>
@@ -462,7 +403,7 @@ export default function Home() {
           <figcaption>Jhon · Equipo Nordic</figcaption>
         </figure>
         <div className="team-copy">
-          <p className="eyebrow">08 · El equipo</p>
+          <p className="eyebrow">07 · El equipo</p>
           <h2>
             Personas que convierten cada visita en
             <em>una experiencia.</em>
