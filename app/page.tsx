@@ -11,6 +11,10 @@ const tastingWhatsappUrl =
   "https://wa.me/5491167937463?text=Hola%20Nordic%2C%20quiero%20sumarme%20a%20la%20lista%20para%20la%20pr%C3%B3xima%20experiencia%20Nordic%20%E2%9C%A8";
 const runeUrl = "/runas";
 
+// Re-render hourly so time-based content (e.g. the Loybox campaign) stays current
+// when the page is statically generated.
+export const revalidate = 3600;
+
 const productSizes = "(max-width: 820px) 100vw, 31vw";
 
 const Arrow = () => <span className="arrow" aria-hidden="true">↗</span>;
